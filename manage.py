@@ -19,3 +19,28 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+'''
+<p>
+    <a href="{% url 'pizzas:index' %}">Joey's Pizzeria</a>
+    <a href="{% url 'pizzas:pizzas' %}">Pizzas</a>
+</p>
+
+{% block content %} 
+
+
+
+{% endblock content %} 
+
+
+Index
+
+{% block content %}
+<p>The Best Pizza in the state!</p>
+{% load static %} 
+<img src="{% static 'pizzas/images/Home1.jpg' %}">
+{% load static %} 
+<img src="{% static 'pizzas/images/Home2.jpg' %}">
+
+{% endblock content %} 
+'''

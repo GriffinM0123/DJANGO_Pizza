@@ -1,8 +1,16 @@
 {% extends "pizzas/base.html" %} 
 
-
-{% block content %}
-<p>The Best Pizza in the state!</p>
-
-
-{% endblock content %} 
+{% block page_header %}
+<div class="jumbotron">
+<h1 class="display-3">Truly Authentic Pizza</h1>
+    <p>Voted best pizza in America by Gordon Ramsay</p>
+    {% load static %} 
+    <img src="{% static 'pizzas/images/Home1.jpg' %}">
+    {% load static %} 
+    <img src="{% static 'pizzas/images/Home2.jpg' %}">
+    <p class="lead">A generational business founded 50 years ago.
+         Joey's pizzeria has been a family business for years, passing
+          down the secrets of the authentic Itallian pizza pie.</p>
+</div>
+{% endblock page_header %}
+ 

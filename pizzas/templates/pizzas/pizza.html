@@ -1,0 +1,39 @@
+{% extends "pizzas/base.html" %} 
+
+
+{% block content %}
+<p>
+    Pizza: {{ pizza }}
+</p>
+
+{% if pizza.id == 1 %} 
+    {% load static %} 
+    <img src="{% static 'pizzas/images/Hawaiian.jpg' %}">
+{% endif %}
+{% if pizza.id == 2 %} 
+    {% load static %} 
+    <img src="{% static 'pizzas/images/MeatLovers.jpg' %}">
+{% endif %}
+{% if pizza.id == 3 %} 
+    {% load static %} 
+    <img src="{% static 'pizzas/images/Pepperoni.jpg' %}">
+{% endif %}
+{% if pizza.id == 4 %} 
+    {% load static %} 
+    <img src="{% static 'pizzas/images/Jalepeno.jpg' %}">
+{% endif %}
+
+<ul>
+    {% for t in toppings %} 
+    <li>
+        <p>{{ t.topping_name }}</p>
+    </li>
+    {% empty %} 
+    <li> There are no toppings for this pizza.</li>
+    {% endfor %} 
+</ul>
+
+<p><a href="{% url 'pizzas:new_topping' pizza.id %}">Add a new Comment</a></p>
+
+
+{% endblock content %} 

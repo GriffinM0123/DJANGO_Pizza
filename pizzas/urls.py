@@ -8,4 +8,6 @@ app_name = 'pizzas'
 urlpatterns = [
     path('',views.index, name='index'),
     path('pizzas',views.pizzas, name='pizzas'),
+    path('pizzas/<int:pizza_id>/',views.pizza, name='pizza'),
+    path('new_topping/<int:pizza_id>/', views.new_topping, name='new_topping'),
 ]
